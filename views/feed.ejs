@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="w-full min-h-screen bg-blue-200 p-10">
+        <h1 class="text-4xl tracking-tighter mb-5 text-black bold-true">ShareThought</h1>
+        <h2 class="text-2xl tracking-tighter mb-5 text-black">Welcome to The ShareThought</h2>
+        <p class="text-lg mb-5 text-black">The ShareThought is a platform for sharing and discussing ideas.</p>
+    
+        <h2 class="text-2xl tracking-tighter mb-5 text-black">Posts</h2>
+
+        
+        <% postss.forEach((post) => { %>
+            <div id="post-<%= post._id %>" class="postcontainer mb-5">
+                <div class="border-[1px] bg-blue-100 w-1/4 p-2 rounded-lg text-sm tracking-tight mb-3">
+                    <h4 class="text-blue-500 mb-2">
+                        @<%= post.user %>
+                  <span class="ml-3 text-sm mt-4 text-zinc-500">[ <%= post.name %> ]</span>
+                </h4>
+                <p class="text-sm tracking-tight"><%= post.content %></p>
+                <div class="btns flex gap-2 mt-2">
+                  <a class="text-blue-500" href="/like/<%= post.id %>">
+                    <%= post.liked ? 'Unlike' : 'Like' %>
+                    <small class="text-zinc-400 text-sm">(<%= post.likes %>)</small>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          <% }) %>     
+
+        <input class="px-4 py-2 bg-blue-500 mt-5 rounded-lg text-white cursor-pointer hover:bg-blue-600" 
+            type="submit" value="Create Post" onclick="window.location.href='/createpost'">
+        <input class="px-4 py-2 bg-red-500 mt-5 rounded-lg ml-2 text-white cursor-pointer hover:bg-red-600" 
+            type="submit" value="Logout" onclick="window.location.href='/logout'">
+    </div>
+</body>
+</html>

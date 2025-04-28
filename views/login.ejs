@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Your Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="w-full min-h-screen bg-blue-200 p-10">
+        <h2 class="text-3xl tracking-tighter mb-5 text-black">Login Account</h2>
+        <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+            <input class="px-1 py-2 border-2 rounded-md border-zinc-500 bg-transparent mb-2 text-black" 
+                   type="email" name="email" placeholder="Email" required>
+            <input class="px-1 py-2 border-2 rounded-md border-zinc-500 bg-transparent mb-2 text-black" 
+                   type="password" name="password" placeholder="Password" required>
+            <input class="px-4 py-2 bg-blue-500 rounded-lg ml-2 text-white cursor-pointer hover:bg-blue-600" 
+                   type="submit" value="Login">
+            <a href="/register" class="text-blue-500 hover:underline ml-2">Create an account</a>
+        </form>
+    </div>
+</body>
+</html>
