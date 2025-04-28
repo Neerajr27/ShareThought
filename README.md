@@ -1,9 +1,3 @@
-# Sharethought
-ShareThought is a social connection application where multiple users can share their views, opinion , news or interesting stories they have and other people can like them or post their own ideas in the app!
-Here's a suggested README for the "ShareThought" project:
-
----
-
 # ShareThought
 
 ShareThought is a social connection application where multiple users can share their views, opinions, news, or interesting stories. Other users can engage with the shared content by liking it or posting their own ideas. It's a creative platform to connect and share thoughts with the world!
